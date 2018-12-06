@@ -1,3 +1,6 @@
+input_file = open('input/A-large-practice.in', 'r')
+input = lambda: input_file.readline().rstrip('\n')
+
 read_ints = lambda: list(map(int, input().split(' ')))
 
 

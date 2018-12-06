@@ -1,7 +1,7 @@
 import math
 import numpy as np
 
-input_file = open('B-large-practice.in', 'r')
+input_file = open('input/B-large-practice.in', 'r')
 input = lambda: input_file.readline().rstrip('\n')
 
 read_ints = lambda: list(map(int, list(input())))
