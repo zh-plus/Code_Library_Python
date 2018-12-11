@@ -1,5 +1,4 @@
-from timer import Timer
-import numpy as np
+from tool_kit import sort_perf_cmp
 
 
 def swap(array, p, q):
@@ -30,14 +29,4 @@ def partition(array, first, last):
 
 
 if __name__ == '__main__':
-    print('my impl:', end='\t')
-    with Timer():
-        for _ in range(100000):
-            a = list(np.random.randint(0, 20, 10))
-            quick_sort(a)
-
-    print('py impl:', end='\t')
-    with Timer():
-        for _ in range(100000):
-            a = list(np.random.randint(0, 20, 10))
-            a.sort()
+    sort_perf_cmp(quick_sort)
