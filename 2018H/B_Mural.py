@@ -27,6 +27,9 @@ if __name__ == '__main__':
         for i in range(1, T + 1):
             N = read_int()
             scores = read_ints()
-            result = solve(N, scores)
-            output_file.write('Case #{}: {}\n'.format(i, result))
-            print('Case #{}: {}'.format(i, result))
+            answer = solve(N, scores)
+
+            result = 'Case #{}: {}'.format(i, answer)
+            print(result)
+            output_file.write(result + '\n')
+

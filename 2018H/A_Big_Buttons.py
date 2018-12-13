@@ -26,10 +26,13 @@ if __name__ == '__main__':
 
     forbidden_seqs = []
 
-    with open('output.txt', 'w') as f:
+    with open('output.txt', 'w') as output_file:
         for i in range(1, cases + 1):
             T, P = read_ints()
             forbidden_seqs = [input() for _ in range(P)]
-            result = solve(T, forbidden_seqs)
-            f.write('Case #{}: {}\n'.format(i, result))
-            print('Case #{}: {}'.format(i, result))
+            answer = solve(T, forbidden_seqs)
+
+            result = 'Case #{}: {}'.format(i, answer)
+            print(result)
+            output_file.write(result + '\n')
+
