@@ -40,6 +40,6 @@ if __name__ == '__main__':
             N, M = read_ints()
             answer = solve(N, M)
 
-            result = 'Case #{}: {}'.format(i, answer)
+            result = f'Case #{i}: {answer}'
             print(result)
             output_file.write(result + '\n')

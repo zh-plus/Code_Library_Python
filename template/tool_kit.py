@@ -7,7 +7,7 @@ class Timer:
         self.start = perf_counter()
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        print('{:0<6.4} s elapsed!'.format(perf_counter() - self.start))
+        print(f'{(perf_counter() - self.start):0<6.4} s elapsed!')
 
 
 def sort_perf_cmp(sort_alg):

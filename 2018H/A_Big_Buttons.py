@@ -32,7 +32,7 @@ if __name__ == '__main__':
             forbidden_seqs = [input() for _ in range(P)]
             answer = solve(T, forbidden_seqs)
 
-            result = 'Case #{}: {}'.format(i, answer)
+            result = f'Case #{i}: {answer}'
             print(result)
             output_file.write(result + '\n')
 
