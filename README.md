@@ -10,7 +10,7 @@ Well known OJ platform.
 
 #### Tips:
 In order to pass the time-limited Codeforces tests, I recommend [PyPy 3.5 (6.0.0)](https://pypy.org/) as interpreter, which is several times 
-faster than origin Python interpreter nowadays.
+faster than origin Python interpreter nowadays(2018.12).
 
 
 ## CodeJam
