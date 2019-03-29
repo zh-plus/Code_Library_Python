@@ -1,19 +1,32 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        if s == ' ':
+            return 1
+
+        if s == '':
+            return 0
+
         result = 1
         appearance = dict()
         i, j = 0, 0
         while j < len(s):
+            length = j - i
             if s[j] not in appearance:
                 appearance[s[j]] = j
-            else:
-                length = j - i
-                for x in range(i, appearance[s[j]] + 1):
-                    appearance.pop(s[x])
+                length += 1
 
                 if length > result:
                     result = length
-                i = appearance[s[j]]
+            else:
+                repeat_index = appearance[s[j]]
+                for x in range(i, repeat_index + 1):
+                    appearance.pop(s[x])
+
+                appearance[s[j]] = j
+
+                if length > result:
+                    result = length
+                i = repeat_index + 1
             j += 1
 
         return result
