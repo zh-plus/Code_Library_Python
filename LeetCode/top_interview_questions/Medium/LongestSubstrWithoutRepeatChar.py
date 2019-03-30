@@ -1,11 +1,5 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        if s == ' ':
-            return 1
-
-        if s == '':
-            return 0
-
         result = 1
         appearance = dict()
         i, j = 0, 0
