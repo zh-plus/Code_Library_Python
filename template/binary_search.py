@@ -1,6 +1,6 @@
 from bisect import bisect
 import numpy as np
-from tool_kit import Timer
+from template.tool_kit import Timer
 
 
 def lower_bound(array, first, last, value):
