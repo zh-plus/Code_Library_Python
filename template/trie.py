@@ -1,14 +1,12 @@
 class TrieNode:
     def __init__(self, char: str):
         self.char = char  # '' for root node
-        self.children_chars = []
-        self.children = []
+        self.children = dict()
         self.word_finished = False
         self.counter = 1  # How many times this character appeared in the addition process
 
-    def add_child(self, new_node):
-        self.children.append(new_node)
-        self.children_chars.append(new_node.char)
+    def add_child(self, char):
+        self.children[char] = TrieNode(char)
 
 
 class Trie:
@@ -20,14 +18,13 @@ class Trie:
         node = self.root
         continuous = True
         for char in word:
-            children_chars = node.children_chars
-            if continuous and char in children_chars:
-                node = node.children[children_chars.index(char)]
+            children = node.children
+            if continuous and char in children:
+                node = node.children[char]
                 node.counter += 1
             else:
-                new_node = TrieNode(char)
-                node.add_child(new_node)
-                node = new_node
+                node.add_child(char)
+                node = children[char]
                 continuous = False
 
         self.total_num += 1
@@ -36,8 +33,8 @@ class Trie:
     def find_longest_common(self):
         length = 0
         node = self.root
-        while len(node.children) == 1 and node.children[0].counter == self.total_num:
-            node = node.children[0]
+        while len(node.children) == 1 and next(iter(node.children.values())).counter == self.total_num:
+            node = next(iter(node.children.values()))
             length += 1
 
         return length
