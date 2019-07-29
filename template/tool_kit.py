@@ -28,12 +28,12 @@ def timer_deco(func):
 def sort_perf_cmp(sort_alg):
     print('my impl:', end='\t')
     with Timer():
-        for _ in range(100000):
-            a = list(np.random.randint(0, 20, 10))
+        for _ in range(100):
+            a = list(np.random.randint(0, 1000000, 10000))
             sort_alg(a)
 
     print('py impl:', end='\t')
     with Timer():
-        for _ in range(100000):
-            a = list(np.random.randint(0, 20, 10))
+        for _ in range(100):
+            a = list(np.random.randint(0, 1000000, 10000))
             a.sort()
