@@ -1,7 +1,5 @@
 from template.tool_kit import sort_perf_cmp
 
-from functools import reduce
-
 
 def radix_sort(array):
     array = list(map(str, array))
