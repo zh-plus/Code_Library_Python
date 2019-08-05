@@ -6,6 +6,9 @@ class TreeNode:
 
 
 class Solution:
+    def __init__(self):
+        self.LDR_result = None
+
     def isValidBST(self, root: TreeNode) -> bool:
         if not root:
             return True

@@ -19,9 +19,26 @@ class SegmentTree:
         self.build(middle + 1, right, (p << 1) | 1)
         tree[p] = tree[p << 1] + tree[(p << 1) | 1]
 
+    def query(self, l, r, s, t, p):
+        if l <= s and t <= r:
+            return self.tree[p]
+
+        middle = (s + t) >> 1
+        summation = 0
+
+        if l <= middle:
+            summation += self.query(l, r, s, middle, p << 1)
+
+        if r > middle:
+            summation += self.query(l, r, middle + 1, t, (p << 1) | 1)
+
+        return summation
+
 
 if __name__ == '__main__':
     array = [10, 11, 12, 13, 14]
     t = SegmentTree(array)
 
     print(t.tree)
+
+    print(t.query(1, 3, 1, len(array), 1))
