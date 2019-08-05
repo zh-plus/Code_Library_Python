@@ -28,7 +28,7 @@ Most of them originate from the sudo code of [Introduction to Algorithms, Third 
 
 In order to illustrate their performance intuitively, there will be a comparison between my implementation and python implementation.
 
-By the way, the `Timer` class from timer.py is quite convenient for me. It is worth encasing your code into `Timer`
+By the way, the `Timer` class from template/tool_kit.py is quite convenient for me. It is worth encasing your code into `Timer`
 ```
 with Timer():
     # your code
