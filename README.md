@@ -1,5 +1,5 @@
 # Hao Zheng's Algorithm Code Library.
-The very first reason I start this repo is preparing for google's SWE interview using Python.
+~~The very first reason I start this repo is preparing for google's SWE interview using Python.~~
 But in order to keep my Java skills warm, I'll maintain a Java version of Code Library in [there](https://github.com/zh-plus/Code_Library_Java).
 As a CS major student, I will try my best to make my implementation elegant in both of them.
 
