@@ -33,6 +33,7 @@ def ldr(root: TreeNode):
     stack = LifoQueue()
     node = root
 
+    result = []
     while node or not stack.empty():
         # go to the most left node
         while node:
@@ -40,11 +41,50 @@ def ldr(root: TreeNode):
             node = node.left
 
         node = stack.get()
-        print(node.val, end=' ')
+        result.append(node.val)
         node = node.right
+
+    return ' '.join(list(map(str, result)))
+
+
+def dlr(root: TreeNode):
+    stack = LifoQueue()
+    node = root
+
+    result = []
+    while node or not stack.empty():
+        while node:
+            result.append(node.val)
+            stack.put(node)
+            node = node.left
+
+        node = stack.get()
+        node = node.right
+
+    return ' '.join(list(map(str, result)))
+
+
+def lrd(root: TreeNode):
+    """
+    After getting DRL(reverse RL for DLR), reverse output to LRD.
+    """
+    stack = LifoQueue()
+    node = root
+
+    result = []
+    while node or not stack.empty():
+        while node:
+            result.append(node.val)
+            stack.put(node)
+            node = node.right
+
+        node = stack.get()
+        node = node.left
+
+    return ' '.join(list(map(str, reversed(result))))
 
 
 if __name__ == '__main__':
     a = [3, 1, 5, 0, None, 4, 8]
     root = TreeNode.from_array(a)
-    ldr(root)
+    print(lrd(root))
