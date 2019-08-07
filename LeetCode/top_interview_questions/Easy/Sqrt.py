@@ -4,7 +4,7 @@ class Solution:
 
     def _sqrt(self, x):
         xn = 6
-        for _ in range(5):
+        for _ in range(100):
             xn = xn - ((xn ** 2 - x) / (2 * xn))
 
         return xn
