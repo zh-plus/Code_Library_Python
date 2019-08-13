@@ -29,11 +29,11 @@ def sort_perf_cmp(sort_alg):
     print('my impl:', end='\t')
     with Timer():
         for _ in range(100):
-            a = list(np.random.randint(0, 1000000, 10000))
+            a = list(np.random.randint(0, 1000000, 100000))
             sort_alg(a)
 
     print('py impl:', end='\t')
     with Timer():
         for _ in range(100):
-            a = list(np.random.randint(0, 1000000, 10000))
+            a = list(np.random.randint(0, 1000000, 100000))
             a.sort()

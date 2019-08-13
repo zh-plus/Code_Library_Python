@@ -1,4 +1,5 @@
 import math
+
 import numpy as np
 
 input_file = open('input/B-large-practice.in', 'r')
@@ -32,4 +33,3 @@ if __name__ == '__main__':
             result = f'Case #{i}: {answer}'
             print(result)
             output_file.write(result + '\n')
-

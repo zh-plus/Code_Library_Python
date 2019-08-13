@@ -1,5 +1,7 @@
-import numpy as np
 import warnings
+
+import numpy as np
+
 from LeetCode.top_interview_questions.Hard.FindMedianSortedArrays import Solution
 
 
@@ -28,7 +30,6 @@ for i in range(100000):
         break
     else:
         print(i)
-
 
 # 0 0 3 4 5
 # 2 3 3 4 5

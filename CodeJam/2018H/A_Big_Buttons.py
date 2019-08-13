@@ -35,4 +35,3 @@ if __name__ == '__main__':
             result = f'Case #{i}: {answer}'
             print(result)
             output_file.write(result + '\n')
-

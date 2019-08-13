@@ -1,5 +1,6 @@
-from template.tool_kit import sort_perf_cmp
 from collections import deque
+
+from template.tool_kit import sort_perf_cmp
 
 
 def swap(array, p, q):

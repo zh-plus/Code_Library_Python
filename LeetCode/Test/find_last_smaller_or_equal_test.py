@@ -1,6 +1,3 @@
-import numpy as np
-
-
 def findFirstLargeOrEqual(nums, left, right, N):
     if right - left < 2:
         if nums[right - 1] < N:

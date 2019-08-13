@@ -1,5 +1,5 @@
-from math import factorial
 from functools import reduce
+from math import factorial
 
 file = open('input/C-large-practice.in', 'r')
 input = lambda: file.readline().rstrip('\n')

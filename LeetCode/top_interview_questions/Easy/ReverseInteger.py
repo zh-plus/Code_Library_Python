@@ -1,6 +1,3 @@
-from typing import List
-import sys
-
 read_int = lambda: int(input())
 read_ints = lambda: list(map(int, input().split(' ')))
 

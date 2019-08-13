@@ -1,5 +1,7 @@
 from bisect import bisect
+
 import numpy as np
+
 from template.tool_kit import Timer
 
 

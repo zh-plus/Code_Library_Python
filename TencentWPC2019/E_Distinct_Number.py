@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 read_int = lambda: int(input())
 read_ints = lambda: list(map(int, input().split()))
 read_tuple = lambda: tuple(map(int, input().split()))
