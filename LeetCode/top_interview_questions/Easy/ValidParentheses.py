@@ -6,11 +6,11 @@ class Solution:
 
         s1 = list(s)
         s2 = []
-        while s1:
+        while s1 or s2:
             while s1 and s1[-1] in right:
                 s2.append(s1.pop())
 
-            if not s2:
+            if not s2 or not s1:
                 return False
 
             while s1 and s2 and s1[-1] in left:
@@ -22,7 +22,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    s = '['
+    s = '{}]'
     solution = Solution()
 
     print(solution.isValid(s))
