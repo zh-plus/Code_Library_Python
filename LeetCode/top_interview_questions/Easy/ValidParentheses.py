@@ -1,28 +1,20 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        left = {'(', '{', '['}
         right = {')', '}', ']'}
         lr_map = {'(': ')', '{': '}', '[': ']'}
 
-        s1 = list(s)
         s2 = []
-        while s1 or s2:
-            while s1 and s1[-1] in right:
-                s2.append(s1.pop())
-
-            if not s2 or not s1:
+        for c in reversed(s):
+            if c in right:
+                s2.append(c)
+            elif not s2 or lr_map[c] != s2.pop():
                 return False
 
-            while s1 and s2 and s1[-1] in left:
-                l, r = s1.pop(), s2.pop()
-                if lr_map[l] != r:
-                    return False
-
-        return True
+        return False if s2 else True
 
 
 if __name__ == '__main__':
-    s = '{}]'
+    s = '[[{{{}}}]{}{}]'
     solution = Solution()
 
     print(solution.isValid(s))
