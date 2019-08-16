@@ -3,13 +3,9 @@ read_ints = lambda: list(map(int, input().split(' ')))
 
 
 def solve(N, M, A):
-    top = N * M
-    forward, left = 0, 0
-    for row in A:
-        left += max(row)
-
-    for column in zip(*A):
-        forward += max(column)
+    top = sum(1 for row in A for x in row if x > 0)
+    left = sum(max(row) for row in A)
+    forward = sum(max(column) for column in zip(*A))
 
     return (top + forward + left) * 2
 
