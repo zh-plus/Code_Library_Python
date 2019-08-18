@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6700af53-b018-4107-9bb0-0e56e6693143" name="CodeLibrary" url="http://10.20.111.5">
+        <fileTransfer host="10.20.111.5" port="22" rootFolder="/home/zf/zhenghao/Code_Library_Python" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
