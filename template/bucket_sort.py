@@ -1,7 +1,5 @@
 from itertools import chain
 
-from template.tool_kit import sort_perf_cmp
-
 
 def bucket_sort(array, bucket_num=1000):
     min_num, max_num = min(array), max(array)
@@ -18,4 +16,6 @@ def bucket_sort(array, bucket_num=1000):
 
 
 if __name__ == '__main__':
+    from template.tool_kit import sort_perf_cmp
+
     sort_perf_cmp(bucket_sort)

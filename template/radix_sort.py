@@ -1,6 +1,3 @@
-from template.tool_kit import sort_perf_cmp
-
-
 def radix_sort(array):
     array = list(map(str, array))
     max_length = len(max(array, key=lambda s: len(s)))
@@ -23,6 +20,8 @@ def radix_sort(array):
 
 
 if __name__ == '__main__':
+    from template.tool_kit import sort_perf_cmp
+
     a = [0, 10, 35, 2, 4, 1]
 
     b = radix_sort(a)

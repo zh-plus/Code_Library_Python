@@ -1,6 +1,3 @@
-from template.tool_kit import sort_perf_cmp
-
-
 def merge_sort(array):
     if len(array) == 0 or len(array) == 1:
         return array
@@ -29,4 +26,6 @@ def merge(left, right):
 
 
 if __name__ == '__main__':
+    from template.tool_kit import sort_perf_cmp
+
     sort_perf_cmp(merge_sort)

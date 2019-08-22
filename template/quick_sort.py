@@ -1,7 +1,5 @@
 from collections import deque
 
-from template.tool_kit import sort_perf_cmp
-
 
 def swap(array, p, q):
     array[p], array[q] = array[q], array[p]
@@ -42,4 +40,6 @@ def quick_sort_loop(array):
 
 
 if __name__ == '__main__':
+    from template.tool_kit import sort_perf_cmp
+
     sort_perf_cmp(quick_sort_loop)
