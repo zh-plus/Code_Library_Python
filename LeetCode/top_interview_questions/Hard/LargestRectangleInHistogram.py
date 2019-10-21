@@ -30,6 +30,6 @@ class Solution1:
 
 
 if __name__ == '__main__':
-    l = [2, 1, 2]
+    l = [2, 1, 5, 6, 2, 3]
     s = Solution1()
     print(s.largestRectangleArea(l), end='')
